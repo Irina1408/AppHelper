@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="AppView.Controls.PageReadOnlyDataGridContextMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.InputBindings>
+        <KeyBinding Gesture="Ctrl+N" Command="{Binding AddCommand, Mode=TwoWay}"/>
+    </UserControl.InputBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="pageSpecificHeader" Grid.Column="0" FontSize="{DynamicResource HeaderFontSize}"/>
+        <DataGrid x:Name="dataGrid" Grid.Row="1" Grid.Column="0" AutoGenerateColumns="False" Margin="5" 
+                HeadersVisibility="Column" CanUserAddRows="False" IsReadOnly="True" HorizontalScrollBarVisibility="Auto"
+                  CanUserDeleteRows="True">
+            <DataGrid.InputBindings>
+                <KeyBinding Gesture="Delete" Command="{Binding DeleteCommand}"/>
+                <KeyBinding Gesture="Ctrl" Key="N" Modifiers="Control" Command="{Binding AddCommand}"/>
+            </DataGrid.InputBindings>
+            <DataGrid.ContextMenu>
+                <ContextMenu x:Name="dataGridContextMenu">
+                    <MenuItem Header="Add" Command="{Binding AddCommand}"/>
+                    <MenuItem Header="Edit" Command="{Binding EditCommand}"/>
+                    <MenuItem Header="Delete" Command="{Binding DeleteCommand}"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+
+    </Grid>
+
+</UserControl>

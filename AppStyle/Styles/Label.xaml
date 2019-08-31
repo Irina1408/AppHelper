@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="{x:Type Label}">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{DynamicResource LabelGeneralForeground}"/>
+        <Setter Property="Background" Value="{DynamicResource LabelGeneralBackground}"/>
+        <Setter Property="Margin" Value="10 0 0 5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="{DynamicResource DefaultFontSize}"/>
+    </Style>
+    
+    <Style x:Key="LabelHeaderStyle" TargetType="Label">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Height" Value="34"/>
+        <Setter Property="Width" Value="402"/>
+        <Setter Property="Foreground" Value="{DynamicResource LabelHeaderForeground}"/>
+        <Setter Property="Background" Value="{DynamicResource LabelHeaderBackground}"/>
+        <Setter Property="FontSize" Value="{DynamicResource HeaderFontSize}"/>
+    </Style>
+    
+    <Style x:Key="LabelGeneralStyle" TargetType="{x:Type Label}" BasedOn="{StaticResource {x:Type Label}}"/>
+    
+</ResourceDictionary>

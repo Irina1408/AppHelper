@@ -1,0 +1,20 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Style x:Key="GeneralPathStyle" TargetType="{x:Type Path}">
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="UseLayoutRounding" Value="True"/>
+        <Setter Property="Stretch" Value="UniformToFill"/>
+        <Setter Property="Fill" Value="{DynamicResource GeneralPathBrush}"/>
+    </Style>
+    
+    <Style x:Key="HoveredPathStyle" TargetType="{x:Type Path}" BasedOn="{StaticResource GeneralPathStyle}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Fill" Value="{DynamicResource HoveredPathBrush}"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+</ResourceDictionary>

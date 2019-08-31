@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -20,6 +22,7 @@ namespace AppCommon.EntityHelp
         private Dictionary<string, object> propertyOriginalValues;
         private bool isChanged;
         private bool hasErrors;
+        //private MemoryStream memoryStream;
 
         #endregion
 
@@ -43,6 +46,19 @@ namespace AppCommon.EntityHelp
 
             foreach (var propertyInfo in typeof(T).GetProperties().Where(item => item.CanRead && item.CanWrite))
             {
+                //if (propertyInfo.PropertyType is IDictionary)
+                //{
+                //    //var vals = (propertyInfo.GetValue(entity) as typeof(propertyInfo.PropertyType)).ToDictionary(entry => entry.Key,
+                //    //                           entry => (T)entry.Value.Clone()); 
+
+                //    var vals = Activator.CreateInstance(propertyInfo.PropertyType) as IDictionary;
+                    
+                //    foreach (var val in vals)
+                //    {
+                        
+                //    }
+                //}
+
                 propertyOriginalValues.Add(propertyInfo.Name, propertyInfo.GetValue(entity));
             }
         }

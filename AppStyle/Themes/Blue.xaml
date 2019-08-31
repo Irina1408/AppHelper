@@ -1,0 +1,114 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- Comment -->
+    <!-- All general brushes and colors are with "GeneralBrush" or "GeneralColor" -->
+
+    <Color x:Key="GeneralForegroundColor">White</Color>
+    <Color x:Key="GeneralBackgroundColor">Transparent</Color>
+
+    <SolidColorBrush x:Key="GeneralForegroundBrush" Color="{StaticResource GeneralForegroundColor}"/>
+    
+    <!--****************************** Brushes ******************************-->
+
+    <SolidColorBrush x:Key="ControlBorderBrush" Color="#1cf1f1f1"/>
+    <SolidColorBrush x:Key="DisabledForegroundBrush" Color="#ff585858"/>
+
+    <!-- Window -->
+    <LinearGradientBrush x:Key="WindowGeneralBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FF6692E7" Offset="0.005"/>
+        <GradientStop Color="#FF61B9FE" Offset="0.993"/>
+        <GradientStop Color="#FF3D3AF8"/>
+        <GradientStop Color="#FF041CFB" Offset="0.04"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="WindowGeneralForeground" Color="{StaticResource GeneralForegroundColor}"/>
+    
+    <!-- Label -->
+    <SolidColorBrush x:Key="LabelGeneralForeground" Color="{StaticResource GeneralForegroundColor}"/>
+    <SolidColorBrush x:Key="LabelGeneralBackground" Color="{StaticResource GeneralBackgroundColor}"/>
+    <SolidColorBrush x:Key="LabelHeaderForeground" Color="#FFFBFAFA"/>
+    <SolidColorBrush x:Key="LabelHeaderBackground" Color="{StaticResource GeneralBackgroundColor}"/>
+    <!--#FF007CFF-->
+
+    <!-- ListBox -->
+    <SolidColorBrush x:Key="ListBoxGeneralBackground" Color="{StaticResource GeneralBackgroundColor}"/>
+    <SolidColorBrush x:Key="ListBoxGeneralForeground" Color="{StaticResource GeneralForegroundColor}"/>
+    <SolidColorBrush x:Key="ListBoxGeneralBorderBrush" Color="Transparent"/>
+
+    <!-- AppNumericBox -->
+    <SolidColorBrush x:Key="AppNumericBoxGeneralForeground" Color= "{StaticResource GeneralForegroundColor}"/>
+    <SolidColorBrush x:Key="AppNumericBoxGeneralBackground" Color="{StaticResource GeneralBackgroundColor}"/>
+    <SolidColorBrush x:Key="AppNumericBoxGeneralBorderBrush" Color="WhiteSmoke"/>
+    <SolidColorBrush x:Key="AppNumericBoxValidationErrorBorderBrush" Color="Red"/>
+
+    <!-- Button -->
+    <SolidColorBrush x:Key="ButtonGeneralBackground" Color="#FF4B7BFF"/>
+    <SolidColorBrush x:Key="ButtonPressedBorderBrush" Color="Black"/>
+    <SolidColorBrush x:Key="ButtonMouseOverBorderBrush" Color="Transparent"/>
+    <SolidColorBrush x:Key="ButtonMouseOverBackground" Color="#FF61B9FE"/>
+    <SolidColorBrush x:Key="ButtonPressedForeground" Color="#FFF"/>
+    <SolidColorBrush x:Key="ButtonGeneralForeground" Color="{StaticResource GeneralForegroundColor}"/>
+
+    <!-- CheckBox -->
+    <SolidColorBrush x:Key="CheckBoxGeneralBackground" Color="{StaticResource GeneralBackgroundColor}"/>
+    <SolidColorBrush x:Key="CheckBoxGeneralForeground" Color="{StaticResource GeneralForegroundColor}"/>
+    
+    <!-- ComboBox -->
+    <SolidColorBrush x:Key="ComboBoxGeneralBackground" Color="{StaticResource GeneralBackgroundColor}"/>
+    <SolidColorBrush x:Key="ComboBoxGeneralForeground" Color="Black"/>
+    <SolidColorBrush x:Key="ComboBoxGeneralBorderBrush" Color="WhiteSmoke"/>
+    <SolidColorBrush x:Key="ComboBoxMouseOverBackground" Color="GhostWhite" Opacity="0.5"/>
+    <SolidColorBrush x:Key="ComboBoxHoverBorderBrush" Color="WhiteSmoke"/>
+    <SolidColorBrush x:Key="ComboBoxValidationErrorBorderBrush" Color="Red"/>
+
+    <!-- TextBox -->
+    <SolidColorBrush x:Key="TextBoxGeneralForeground" Color= "{StaticResource GeneralForegroundColor}"/>
+    <SolidColorBrush x:Key="TextBoxGeneralBackground" Color="{StaticResource GeneralBackgroundColor}"/>
+    <SolidColorBrush x:Key="TextBoxGeneralBorderBrush" Color="WhiteSmoke"/>
+    <SolidColorBrush x:Key="TextBoxValidationErrorBorderBrush" Color="Red"/>
+    
+    <!-- TextBlock -->
+    <SolidColorBrush x:Key="TextBlockGeneralForeground" Color= "{StaticResource GeneralForegroundColor}"/>
+    <SolidColorBrush x:Key="TextBlockGeneralBackground" Color="{StaticResource GeneralBackgroundColor}"/>
+
+    <!-- TreeView -->
+    <SolidColorBrush x:Key="TreeViewGeneralForeground" Color= "{StaticResource GeneralForegroundColor}"/>
+    <SolidColorBrush x:Key="TreeViewGeneralBackground" Color="{StaticResource GeneralBackgroundColor}"/>
+    <SolidColorBrush x:Key="TreeViewGeneralBorderBrush" Color="Transparent"/>
+    
+    <!-- TreeViewItem -->
+    <SolidColorBrush x:Key="TreeViewItemGeneralForeground" Color= "{StaticResource GeneralForegroundColor}"/>
+    <SolidColorBrush x:Key="TreeViewItemGeneralBackground" Color="{StaticResource GeneralBackgroundColor}"/>
+    <SolidColorBrush x:Key="TreeViewItemGeneralBorderBrush" Color="Transparent"/>
+
+    <!-- PasswordBox -->
+    <SolidColorBrush x:Key="PasswordBoxGeneralForeground" Color="{StaticResource GeneralForegroundColor}"/>
+    <SolidColorBrush x:Key="PasswordBoxGeneralBackground" Color="{StaticResource GeneralBackgroundColor}"/>
+    <SolidColorBrush x:Key="PasswordBoxGeneralBorderBrush" Color="WhiteSmoke"/>
+
+    <!-- GroupBox -->
+    <SolidColorBrush x:Key="GroupBoxGeneralForeground" Color="{StaticResource GeneralForegroundColor}"/>
+    <SolidColorBrush x:Key="GroupBoxGeneralBackground" Color="{StaticResource GeneralBackgroundColor}"/>
+    
+    <!-- TabItem -->
+    <SolidColorBrush x:Key="TabItemHeaderForeground" Color="{StaticResource GeneralForegroundColor}"/>
+    <SolidColorBrush x:Key="TabItemHeaderMouseOverForeground" Color="#FF7F7F7F"/>
+    <SolidColorBrush x:Key="TabItemHeaderSelectedForeground" Color="#ABE9FF"/>
+
+    <!-- TabControl -->
+    <SolidColorBrush x:Key="TabControlGeneralForeground" Color="{StaticResource GeneralForegroundColor}"/>
+    <SolidColorBrush x:Key="TabControlGeneralBackground" Color="{StaticResource GeneralBackgroundColor}"/>
+
+    <!-- RudioButton -->
+    <SolidColorBrush x:Key="RudioButtonGeneralForeground" Color="{StaticResource GeneralForegroundColor}"/>
+
+    <!-- DataGrid -->
+    <SolidColorBrush x:Key="DataGridGeneralForeground" Color="Black"/>
+    <SolidColorBrush x:Key="DataGridGeneralBackground" Color="{StaticResource GeneralBackgroundColor}"/>
+    <SolidColorBrush x:Key="DataGridGeneralBorderBrush" Color="Transparent"/>
+
+    <!-- Path -->
+    <SolidColorBrush x:Key="GeneralPathBrush" Color="WhiteSmoke"/>
+    <SolidColorBrush x:Key="HoveredPathBrush" Color="#4169E1"/>
+
+</ResourceDictionary>

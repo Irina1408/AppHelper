@@ -11,7 +11,8 @@ namespace AppUtils.SerializationUtils
     public class SerializableDictionary<TKey, TValue>
         : Dictionary<TKey, TValue>, IXmlSerializable
     {
-        #region IXmlSerializable Members
+        #region IXmlSerializable implementation
+
         public System.Xml.Schema.XmlSchema GetSchema()
         {
             return null;
@@ -69,6 +70,7 @@ namespace AppUtils.SerializationUtils
                 writer.WriteEndElement();
             }
         }
+
         #endregion
     }
 }

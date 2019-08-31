@@ -52,13 +52,16 @@
     <Compile Include="Attributes\HideInDetailsOnEditingAttribute.cs" />
     <Compile Include="Attributes\IsReadOnlyAttribute.cs" />
     <Compile Include="Attributes\IsReadOnlyOnEditingInDetailsAttribute.cs" />
+    <Compile Include="Attributes\OrderAttribute.cs" />
     <Compile Include="Attributes\ShowLinkedAttribute.cs" />
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\CommandContainer.cs" />
     <Compile Include="Commands\DataGridSelectedItemCommand.cs" />
+    <Compile Include="Commands\DataGridSelectedItemsCommand.cs" />
     <Compile Include="Commands\ParametrizedCommand.cs" />
     <Compile Include="Commands\TreeViewSelectedItemCommand.cs" />
     <Compile Include="CommonData\Month.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="EntityHelp\EntityWrapper.cs" />
     <Compile Include="Exceptions\ReferenceConstraintException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

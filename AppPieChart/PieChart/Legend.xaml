@@ -33,7 +33,7 @@
                                         <SolidColorBrush Color="White" Opacity="0.5"/>
                                     </Setter.Value>
                                 </Setter>
-                                <Setter Property="FontSize" Value="18"/>
+                                <Setter Property="FontSize" Value="16"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>

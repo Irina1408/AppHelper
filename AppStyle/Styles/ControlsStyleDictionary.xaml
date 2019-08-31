@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/AppStyle;component/Styles/Button.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AppStyle;component/Styles/CheckBox.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AppStyle;component/Styles/ComboBox.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AppStyle;component/Styles/GroupBox.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AppStyle;component/Styles/DataGrid.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AppStyle;component/Styles/Image.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AppStyle;component/Styles/Label.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AppStyle;component/Styles/ListBox.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AppStyle;component/Styles/NumericBox.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AppStyle;component/Styles/PasswordBox.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AppStyle;component/Styles/Path.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AppStyle;component/Styles/RadioButton.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AppStyle;component/Styles/TextBox.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AppStyle;component/Styles/TextBlock.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AppStyle;component/Styles/TabControl.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AppStyle;component/Styles/TreeView.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/AppStyle;component/Styles/WindowStyle.xaml"/>
+
+        <!--<ResourceDictionary Source="pack://application:,,,/AppStyle;component/Themes/FontDetails.xaml"/>-->
+    </ResourceDictionary.MergedDictionaries>
+    
+</ResourceDictionary>

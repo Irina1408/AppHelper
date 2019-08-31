@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6F10249-243E-452B-8906-9730865380C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppView</RootNamespace>
+    <AssemblyName>AppView</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonInterfaces\IHeader.cs" />
+    <Compile Include="Controls\DetailsScreen.xaml.cs">
+      <DependentUpon>DetailsScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Interfaces\IControl.cs" />
+    <Compile Include="Controls\Interfaces\IPage.cs" />
+    <Compile Include="Controls\Interfaces\ITabMenu.cs" />
+    <Compile Include="Controls\MultiControlPage.xaml.cs">
+      <DependentUpon>MultiControlPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageNavigatorScreen.xaml.cs">
+      <DependentUpon>PageNavigatorScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageReadOnlyDataGrid.xaml.cs">
+      <DependentUpon>PageReadOnlyDataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageReadOnlyDataGridContextMenu.xaml.cs">
+      <DependentUpon>PageReadOnlyDataGridContextMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageReadOnlyList.xaml.cs">
+      <DependentUpon>PageReadOnlyList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageTreeView.xaml.cs">
+      <DependentUpon>PageTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageTreeViewItemListSelection.xaml.cs">
+      <DependentUpon>PageTreeViewItemListSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PageTreeViewItemSelection.xaml.cs">
+      <DependentUpon>PageTreeViewItemSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TabMenuScreen.xaml.cs">
+      <DependentUpon>TabMenuScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Help\GridHelp\AddPropertyToGrid.cs" />
+    <Compile Include="Help\GridHelp\GridFiller.cs" />
+    <Compile Include="Help\TreeViewHelp\CheckableTreeItem.cs" />
+    <Compile Include="Help\GridHelp\GridItem.cs" />
+    <Compile Include="Help\GridHelp\GridRowColSettings.cs" />
+    <Compile Include="Help\SimpleBindPropertyInfo.cs" />
+    <Compile Include="Help\BindPropertyInfo.cs" />
+    <Compile Include="Help\TreeViewHelp\TreeHelper.cs" />
+    <Compile Include="Help\TreeViewHelp\TreeItem.cs" />
+    <Compile Include="Help\TypeProcessor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewManager.cs" />
+    <Compile Include="View\DefaultView.cs" />
+    <Compile Include="View\IView.cs" />
+    <Compile Include="View\PageNavigationView.cs" />
+    <Compile Include="View\TabMenuView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppCommon\AppCommon.csproj">
+      <Project>{b2e9f709-9a2c-4010-a4d1-254cf36235d3}</Project>
+      <Name>AppCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AppUtils\AppUtils.csproj">
+      <Project>{97205b42-c847-40c1-bb48-2de49a631456}</Project>
+      <Name>AppUtils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\DetailsScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MultiControlPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PageNavigatorScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageReadOnlyDataGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageReadOnlyDataGridContextMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageReadOnlyList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageTreeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageTreeViewItemListSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PageTreeViewItemSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TabMenuScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

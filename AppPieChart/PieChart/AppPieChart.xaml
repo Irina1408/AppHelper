@@ -20,7 +20,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             
-            <Label x:Name="title" Grid.Row="0" FontSize="28" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+            <Label x:Name="title" Grid.Row="0" FontSize="22" FontWeight="Bold" HorizontalContentAlignment="Center"/>
             <pieChart:Legend Grid.Row="1" Margin="10"/>
         </Grid>
         

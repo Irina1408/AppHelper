@@ -1,0 +1,88 @@
+﻿<UserControl x:Class="AppStyle.Controls.AppBarChart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style TargetType="ListBoxItem">
+            <!-- override the default template to remove the default styling on the IsSelected property -->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                        <Border x:Name="border" BorderBrush="Transparent" BorderThickness="1">
+                            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="Black"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border">
+                                    <Setter.Value>
+                                        <SolidColorBrush Color="White" Opacity="0.5"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="FontSize" Value="16"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="10">
+            <Grid Name="aroundBarsGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                
+                <Border Grid.Column="1" Grid.Row="0" BorderThickness="2 0 0 2" BorderBrush="Black">
+                    <Grid Name="barsGrid">
+                    </Grid>
+                </Border>
+            </Grid>
+        </ScrollViewer>
+
+        <Grid Grid.Column="1">
+            <ScrollViewer CanContentScroll="True" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto">
+                <ListBox Name="legend" HorizontalContentAlignment="Stretch"  BorderThickness="0" 
+                 IsSynchronizedWithCurrentItem="True" Margin="0" Visibility="{Binding LegendVisibility}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid HorizontalAlignment="Stretch" Margin="3" Background="Transparent">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <!-- the colour key -->
+                                <Rectangle Grid.Column="0" Width="25" Height="25" Tag="{Binding}" Margin="2"
+                                       Fill="{Binding Brush, RelativeSource={RelativeSource AncestorType=ListBox}}"/>
+
+                                <!-- the name of this item -->
+                                <TextBlock Grid.Column="1" Margin="3" Tag="{Binding}" MinWidth="150" FontSize="16"
+                                   Text="{Binding Caption, RelativeSource={RelativeSource AncestorType=ListBox}}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</UserControl>

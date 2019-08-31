@@ -48,6 +48,9 @@
     <Compile Include="EnumHelper.cs" />
     <Compile Include="FileUtils\ExcelTableReader.cs" />
     <Compile Include="FileUtils\FileHelper.cs" />
+    <Compile Include="Security\CryptographerDes.cs" />
+    <Compile Include="Security\ICryptographer.cs" />
+    <Compile Include="SerializationUtils\NotifiableSerializableDictionary.cs" />
     <Compile Include="SerializationUtils\ObjectSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SerializationUtils\SerializableDictionary.cs" />
